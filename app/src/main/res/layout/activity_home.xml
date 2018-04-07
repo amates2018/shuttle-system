@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:map="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/map"
-	android:name="com.google.android.gms.maps.SupportMapFragment"
+	android:id="@+id/container"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".HomeActivity" />
+	tools:context=".ui.HomeActivity">
+	
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/home_toolbar"
+		android:layout_width="0dp"
+		android:layout_height="?android:actionBarSize"
+		android:layout_marginEnd="@dimen/padding_normal"
+		android:layout_marginStart="@dimen/padding_normal"
+		android:layout_marginTop="@dimen/padding_normal"
+		android:background="@color/white"
+		android:elevation="@dimen/z_app_bar"
+		android:theme="@style/Shuttle.AppBarOverlay"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:popupTheme="@style/Shuttle.PopupOverlay"
+		app:title="@string/app_name" />
+	
+	<fragment
+		android:id="@+id/map"
+		android:name="com.google.android.gms.maps.SupportMapFragment"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -7,5 +7,25 @@
 		<item name="colorPrimaryDark">@color/primary_dark</item>
 		<item name="colorAccent">@color/accent</item>
 	</style>
+	
+	<style name="Shuttle.FullScreen">
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+	</style>
+	
+	<style name="Shuttle.Translucent">
+		<!-- using a semi-transparent window background for the drag-back gesture -->
+		<item name="android:windowBackground">@color/scrim</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+	</style>
+	
+	<style name="Shuttle.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	
+	<style name="Shuttle.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 </resources>
