@@ -165,7 +165,6 @@ public class AnimUtils {
 	
 	/**
 	 * https://halfthought.wordpress.com/2014/11/07/reveal-transition/
-	 * <p/>
 	 * Interrupting Activity transitions can yield an OperationNotSupportedException when the
 	 * transition tries to pause the animator. Yikes! We can fix this by wrapping the Animator:
 	 */

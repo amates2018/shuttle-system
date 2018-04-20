@@ -49,9 +49,9 @@ public class ViewUtils {
      * PhoneWindowManager.
      */
     public static boolean isNavBarOnBottom(@NonNull Context context) {
-        final Resources res= context.getResources();
-        final Configuration cfg = context.getResources().getConfiguration();
-        final DisplayMetrics dm =res.getDisplayMetrics();
+        Resources res= context.getResources();
+        Configuration cfg = context.getResources().getConfiguration();
+        DisplayMetrics dm =res.getDisplayMetrics();
         boolean canMove = (dm.widthPixels != dm.heightPixels &&
                 cfg.smallestScreenWidthDp < 600);
         return(!canMove || dm.widthPixels < dm.heightPixels);
@@ -125,10 +125,10 @@ public class ViewUtils {
                                               float high,
                                               float precision,
                                               DisplayMetrics metrics) {
-        final float mid = (low + high) / 2.0f;
+        float mid = (low + high) / 2.0f;
 
         paint.setTextSize(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, mid, metrics));
-        final float maxLineWidth = paint.measureText(text);
+        float maxLineWidth = paint.measureText(text);
 
         if ((high - low) < precision) {
             return low;
@@ -213,15 +213,15 @@ public class ViewUtils {
     public static boolean viewsIntersect(View view1, View view2) {
         if (view1 == null || view2 == null) return false;
 
-        final int[] view1Loc = new int[2];
+        int[] view1Loc = new int[2];
         view1.getLocationOnScreen(view1Loc);
-        final Rect view1Rect = new Rect(view1Loc[0],
+        Rect view1Rect = new Rect(view1Loc[0],
                 view1Loc[1],
                 view1Loc[0] + view1.getWidth(),
                 view1Loc[1] + view1.getHeight());
         int[] view2Loc = new int[2];
         view2.getLocationOnScreen(view2Loc);
-        final Rect view2Rect = new Rect(view2Loc[0],
+        Rect view2Rect = new Rect(view2Loc[0],
                 view2Loc[1],
                 view2Loc[0] + view2.getWidth(),
                 view2Loc[1] + view2.getHeight());
